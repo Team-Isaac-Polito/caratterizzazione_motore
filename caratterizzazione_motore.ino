@@ -9,7 +9,7 @@
 int count;
 
 void setup() {
-  int rpm,tempo;
+  int tempo;
 
   // SERIALE
   Serial.begin(115200);
@@ -85,6 +85,7 @@ void getEncoderData(int &rpmL,int &prevMillis)
     count = 0;
     sei();                                                              // AG FINE operazione atomica - non può essere interrotta da interrupt
 }
+
 void printData() {
   static int rpm;
   static int previousMillis;
